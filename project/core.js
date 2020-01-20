@@ -63,7 +63,7 @@ function sol(){
 }
 if(count<=0){
     document.querySelector('h1').textContent='Previous Num is '+text0
-    document.querySelector('h2').textContent='gameover!!!'
+    document.querySelector('h2').textContent='GAMEOVER!!! NOOB FUK'
     document.querySelector('h2').setAttribute('style','background-color:red;')
     document.querySelector('.int_tex').setAttribute('disabled',true)
     document.querySelector('.button').setAttribute('disabled',true)
