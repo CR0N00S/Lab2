@@ -3,7 +3,7 @@
     <meta charset="UTF-8">
     <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Gallery</title>
+    <title>About me</title>
 
     <!-- Bootstrap 3.3.7 -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
@@ -119,8 +119,8 @@
             <!-- search form -->
             
             <!-- /.search form -->
-             <!-- sidebar menu: : style can be found in sidebar.less -->
-             <ul class="sidebar-menu" data-widget="tree">
+            <!-- sidebar menu: : style can be found in sidebar.less -->
+            <ul class="sidebar-menu" data-widget="tree">
               <li class="header">MAIN NAVIGATION</li>
               <li class="nav-item">
                 <a href="./index.html" class="nav-link"><i class="fa fa-home"></i> <span>Home</span></a>
@@ -147,12 +147,12 @@
           <!-- Content Header (Page header) -->
           <section class="content-header">
             <h1>
-              About me
-              <small>Nitiwit Wachirawiroon</small>
+              My project
+              <small>Guessing game</small>
             </h1>
             <ol class="breadcrumb">
-              <li><a href="./gallery.html"><i class="fa fa-dashboard"></i> Gallery</a></li>
-              <li class="active">Album</li>
+              <li><a href="./guss.html"><i class="fa fa-tasks"></i> My project</a></li>
+              <li class="active">Guessing game</li>
             </ol>
           </section>
       
@@ -160,67 +160,35 @@
           <section class="content">
       
             <!-- Default box -->
-            <div class="box">
-              <div class="box-body">
-                <h1>&nbsp;Year 1 basic computer project</h1>
-               <div class="col-lg-4">
-                <img src="dist/img/2.jpg" style="width: 85%; height: auto;">
-               </div>
-               <div class="col-lg-4">
-                <img src="dist/img/3.jpg" style="width: 85%;height: auto;">
-               </div>
-               <div class="col-lg-4">
-                <img src="dist/img/4.jpg" style="width: 85%; height: auto;">
-              </div>
-              </div>
-              <div class="box-header with-border">
-                <h1>&nbsp;&nbsp;Year 2 OOP project</h1>
-                <div class="col-lg-4">
-                  <img src="dist/img/title.png" style="width: 85%; height: auto;">
-                </div>
-                <div class="col-lg-4">
-                  <img src="dist/img/select.png" style="width: 85%; height: auto;">
-                </div>
-                <div class="col-lg-4">
-                  <img src="dist/img/gameplay.png" style="width: 85%; height: auto;">
-                </div>
-                
-                </div>
-                <h1>&nbsp;&nbsp;My other picture </h1>
-                <div class="col-lg-4">
-                  <img src="dist/img/41829222_1756398834470371_2144392912224387072_n.jpg" style="width: 80%; height: auto;">
-                </div>
-                <div class="col-lg-4">
-                  <img src="dist/img/40512340_1850007461749806_1249342622753882112_o.jpg" style="width: 80%; height: auto;">
-                </div>
-                <div class="col-lg-4">
-                  <img src="dist/img/IMG_0978.jpg" style="width: 80%; height: auto;">
-                </div>
-                
-                
-                
-                <div class="col-lg-12">
-                  <!-- small box -->
-                  
-                
-              </div>
-              
-              
-              <!-- /.box-body -->
-              <div class="box-footer">
-                
-                
-              </div>
-              <!-- /.box-footer-->
-              
+            <div class="box" style="background-color: black;">
+                 
+    <center><h4 style="font-size: 100px;font-style: italic;color: white;">Guessing number ? </h4></center>
+    <p style="text-align: center;font-size: 75px;color: white;font-style: italic;">Enter a Guess</p>
+<form id="fm1" action="">
+    
+    <input class="int_tex" id="tex" size="20" type="text" style="border: 10px solid rgb(104, 104, 104); width: auto; text-align: center; font-size: 50px; border-radius: 10px; width: 100%;"> 
+    
+    <div id="int_clk">
+    <center><input class="button" type="button" value="Submit guess" onclick="sol()" style="font-size: 20px; border-radius: 10px;font-style: italic;"  ></center>
+    </div>
+</form>
+<h3 style="text-align: center;  font-size: 50px; color: white; font-style: italic;"></h3>
+<h6 style="text-align: center; font-size: 50px; color: white; font-style: italic;"></h6>
+<h5 style="text-align: center;  font-size: 50px; color: white; font-style: italic;"></h5>
+<h2 style="text-align: center;  font-size: 50px; color: white; font-style: italic;"></h2>
+
+
+<div id="hid">
+    
+ <center><a href="index.html"> <input class="hid" type="button" value="restart this website" style="font-size: 20px; border-radius: 10px;font-style: italic;" ></a></center> 
+</div>
+
+
+<script src="/project/core.js"></script>
             </div>
             <!-- /.box -->
-
-            
-            
+      
           </section>
-
-          
           <!-- /.content -->
         </div>
         <!-- /.content-wrapper -->

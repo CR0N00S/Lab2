@@ -26,13 +26,13 @@ function sol(){
     input = document.getElementById('tex').value;
     text0 += input +' ';
     if(input<0||input>100){
-        document.querySelector('h1').textContent='Previous Num is '+text0 
+        document.querySelector('h6').textContent='Previous Num is '+text0 
         document.querySelector('h2').textContent='Wrong input!!!'
         document.querySelector('h2').setAttribute('style','background-color:red;')
         document.querySelector('h5').textContent='You have '+count+' left'
     }
     else if(input<randnum){
-        document.querySelector('h1').textContent='Previous Num is '+text0
+        document.querySelector('h6').textContent='Previous Num is '+text0
         document.querySelector('h2').textContent='Wrong!!!'
         document.querySelector('h2').setAttribute('style','background-color:red;')
         document.querySelector('h3').textContent='Num is higher'
@@ -41,7 +41,7 @@ function sol(){
         document.querySelector('h5').textContent='You have '+count+' left'
         console.log(count)
     }else if(input>randnum){
-        document.querySelector('h1').textContent='Previous Num is '+text0 
+        document.querySelector('h6').textContent='Previous Num is '+text0 
 
         document.querySelector('h2').textContent='Wrong!!!'
         document.querySelector('h2').setAttribute('style','background-color:red;')
@@ -62,7 +62,7 @@ function sol(){
 
 }
 if(count<=0){
-    document.querySelector('h1').textContent='Previous Num is '+text0
+    document.querySelector('h6').textContent='Previous Num is '+text0
     document.querySelector('h2').textContent='GAMEOVER!!! NOOB FUK'
     document.querySelector('h2').setAttribute('style','background-color:red;')
     document.querySelector('.int_tex').setAttribute('disabled',true)
