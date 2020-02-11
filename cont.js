@@ -12,7 +12,9 @@ let firebaseConfig = {
 firebase.initializeApp(firebaseConfig);
 let db = firebase.firestore();
 let gender = 0;
-
+let g_male = 0;
+let g_female = 0;
+let g_other = 0;
 $('button').on('click', () => {
   let name= $('#name').val()
   let mass = $('#mass').val()
@@ -57,18 +59,56 @@ db.collection('hwtest').onSnapshot(doc => {
 
   })
 
-
-
-})
-  let g_male = 0;
-  let g_female = 0;
-  let g_other = 0;
+ 
   snapshot.forEach(doc => {
     //Counting contacts gender
     const data = doc.data();
-    if (data.gender == "male") g_male++;
-    else if (data.gender == "female") g_female++;
+    if (data.gender == "Male") g_male++;
+    else if (data.gender == "Female") g_female++;
     else g_other++;
 })
+
+
+})
+  
+let ctx = document.getElementById('myChart').getContext('2d');
+
+console.log(ctx)
+let myChart = new Chart(ctx, {
+    type: 'pie',
+    data: {
+        labels: ['Male', 'Female', 'Other',],
+        datasets: [{
+            label: '# of Votes',
+            data: [12, 19, 3],
+            backgroundColor: [
+                'rgba(255, 99, 132, 1)',
+                'rgba(54, 162, 235, 1)',
+                'rgba(255, 206, 86, 1)',
+                
+            ],
+            borderColor: [
+                'rgba(255, 99, 132, 1)',
+                'rgba(54, 162, 235, 1)',
+                'rgba(255, 206, 86, 1)',
+                
+            ],
+            borderWidth: 1
+        }]
+    },
+    options: {
+        scales: {
+            yAxes: [{
+                ticks: {
+                    beginAtZero: true
+                }
+            }]
+        }
+    }
+});
+
+myChart.data.datasets[0].data = [g_male,g_female,g_other]
+myChart.update()
+
 
 
