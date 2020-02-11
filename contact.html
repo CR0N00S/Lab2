@@ -185,47 +185,75 @@
                 </div>
                 
                 <div class="col-lg-12">
-                  <div class="col-lg-2">
-                    <h1>Subject: </h1>
-                    <input type="text" name="subject" />
+                  <div class="col-lg-6">
+                    <div class="cont">
+                      <br>
+                      
+                      <div >
+                        <p>Massage: <br><br><textarea name="Massage" id="mass" cols="30" rows="3"></textarea></p>
+                      </div>
+                      <div >
+                        <p>Name: &ensp; <input type="text" id="name" name="subject" /></p>
+                      </div>
+                     <div id="gender">
+                      <p><br>Gender: &ensp;          
+                        <input type="radio" name="gender" value="Male"> Male
+                        &nbsp;
+                        <input type="radio" name="gender" value="Female">Female
+
+                        <input type="radio" name="gender" value="Other">Other
+                      </p>
+                     </div>
+                     <div>
+                      <p><br> E-mail: &ensp; <input type="text" id="e_mail" name="subject" /></p>
+                     </div>
+                      <div style="text-align: center;">
+                        
+                          <button >Submit</button>
+                      
+                      </div>
+
+                    </div>
+                    <!-- script to filebase -->
                   </div>
-                  <div class="col-lg-2">
-                    <h1>Massage: </h1>
-                    <textarea name="Massage" cols="30" rows="4"></textarea>
-                  </div>
-                  <div class="col-lg-2">
-                    <h1>Name: </h1>
-                    <input type="text" name="subject" />
-                  </div>
-                  <div class="col-lg-2">
-                    <h1>Gender: </h1>
-                    <input type="radio" name="subject" value="Male">  Male
-                  <input type="radio" name="subject" value="Female">Female
-                  </div>
-                  <div class="col-lg-2">
-                    <h1>Phone: </h1>
-                    <input type="text" name="subject" />
-                  </div>
-                  <div class="col-lg-2">
-                    <h1>Email: </h1>
-                    <input type="text" name="subject" />
+                  <div class="col-lg-6">
+                    <div class="box">
+                      <div class="box-header with-border">
+                        <h3 class="box-title">Donut Chart</h3>
+          
+                        
+                      </div>
+                      <div class="box-body">
+                        <canvas id="myChart" style="height: 274px; width: 548px;" height="274" width="548"></canvas>
+                      </div>
+                      <!-- /.box-body -->
+                    </div>
+
+                    <div class="col-md-6">
+                      <div class="card text-white bg-dark mb-3">
+                          <div class="card-header">
+                              <h3 class="card-title">Result</h3>
+                          </div>
+                          <div class="card-body">
+                              <table class="table text-white">
+                                  <thead>
+                                      <tr>
+                                          <th>Name</th>
+                                          <th>Massage</th>
+                                          <th>E-mail</th>
+                                          <th>Gender</th>
+                                      </tr>
+                                  </thead>
+                                  
+                                  <tbody>
+                                      
+                                  </tbody>
+                              </table>
+      
+                          </div>
                   </div>
                 </div>
-                <div style="text-align: center;">
-                  <a href="contact.html">
-                    <input type="submit" name="submit" value="Submit">
-                </a>
-                </div>
                 
-                
-                
-                
-                <div class="col-lg-12">
-                  <!-- small box -->
-                  
-                
-              </div>
-              
               
               <!-- /.box-body -->
               <div class="box-footer">
@@ -451,6 +479,18 @@
 <!-- FastClick -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/fastclick/1.0.6/fastclick.min.js" integrity="sha256-t6SrqvTQmKoGgi5LOl0AUy+lBRtIvEJ+++pLAsfAjWs=" crossorigin="anonymous"></script>
 <!-- AdminLTE App -->
-<script src="./dist/js/adminlte.min.js"></script>
+
+<script src="https://www.gstatic.com/firebasejs/7.7.0/firebase-app.js"></script>
+
+
+<script src="https://www.gstatic.com/firebasejs/7.7.0/firebase-firestore.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.js" integrity="sha256-R4pqcOYV8lt7snxMQO/HSbVCFRPMdrhAFMH+vr9giYI=" crossorigin="anonymous"></script>
+
+<script src="/chart.js"></script>
+
+<script src="/cont.js"> </script>
+
+
 </body>
 </html>
