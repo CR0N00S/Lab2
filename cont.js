@@ -45,6 +45,7 @@ db.collection('hwtest').onSnapshot(doc => {
 
 
   doc.forEach(item => {
+    
     console.log(item.data())
     let row = table.insertRow(-1)
         let firstCell = row.insertCell(0)
@@ -56,21 +57,21 @@ db.collection('hwtest').onSnapshot(doc => {
         secondCell.textContent = item.data().massage
         thirdCell.textContent = item.data().email
         fourCell.textContent = item.data().gender
+        
+        if (item.data().gender == "Male") g_male++;
+        else if (item.data().gender == "Female") g_female++;
+        else g_other++;
+
+        
 
   })
 
  
-  snapshot.forEach(doc => {
-    //Counting contacts gender
-    const data = doc.data();
-    if (data.gender == "Male") g_male++;
-    else if (data.gender == "Female") g_female++;
-    else g_other++;
-})
+//   snapshot.forEach(doc => {
+//     //Counting contacts gender
+    
+// })
 
-
-})
-  
 let ctx = document.getElementById('myChart').getContext('2d');
 
 console.log(ctx)
@@ -106,9 +107,15 @@ let myChart = new Chart(ctx, {
         }
     }
 });
+    console.log(g_female)
+    console.log(g_male)
+    console.log(g_other)
 
-myChart.data.datasets[0].data = [g_male,g_female,g_other]
-myChart.update()
+  myChart.data.datasets[0].data = [g_male,g_female,g_other]
+  myChart.update()
 
+
+})
+  
 
 
